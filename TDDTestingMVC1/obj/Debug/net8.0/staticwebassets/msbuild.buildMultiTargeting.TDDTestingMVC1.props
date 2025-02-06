@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TDDTestingMVC1.props" />
+</Project>

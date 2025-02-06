@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TDDTestingMVC1.Models.Cliente>
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+<h1> Administracion de Cliente</h1>
+<div class="card">
+    <h5 class="card-header">Cliente</h5>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => model.Codigo)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Cedula)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Apellidos)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Nombres)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.FechaNacimiento)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Mail)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Telefono)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Direccion)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Estado)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model){
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nombres)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Mail)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        <p class="text-center">
+            <a>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-person-plus-fill"></i> Crear Clientes
+            </a>
+            </a>
+        </p>
+        
+</div>
+
+
+
